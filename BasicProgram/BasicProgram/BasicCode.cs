@@ -9,48 +9,30 @@ namespace BasicProgram
     
     internal class BasicCode
     {
-        public int Flip;
-        public int head = 0;
-        public int tail = 0;
-        public int Coin;
-        public int headCount=0;
-        public int tailCount=0;
 
-
-
-        double headPercentage;
-        double tailPercentage;
-        public void FlipCoin()
+        public int Year;
+        public void LeapYear()
         {
-            //take i/p from user
-            Console.WriteLine("Enter the value for number of flips");
-            Flip = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the Year");
+            Year = Convert.ToInt32(Console.ReadLine());
 
-            if (Flip > 0) //if Flip ids grater than 0 then iterate for loop
+            if ((Year % 400) == 0)
             {
-                for (int i = 0; i < Flip; i++)
-                { 
-                    Random random= new Random();
-                    Coin = random.Next(0, 2);
-                    if (Coin == 0)
-                    {
-                        Console.WriteLine("HEAD");
-                        head = 1;
-                        headCount++;
-                    }
-                    else
-                    {
-                        Console.WriteLine("TAIL");
-                        tail =1;
-                        tailCount++;
-                    }
-                }
-                headPercentage = (headCount * 100) / Flip;
-                Console.WriteLine("percentage of head:" +headPercentage);
-                tailPercentage = (tailCount * 100) / Flip;
-                Console.WriteLine("Percentage of tail: " + tailPercentage);
+                Console.WriteLine("Year is leap year");
             }
+            else if ((Year % 100) == 0)
+            {
+                Console.WriteLine("Year is  Leap Year");
+            }
+            else if ((Year % 4) == 0)
+            {
+                Console.WriteLine("Year is leap year");
+            }
+            else 
+            {
+                Console.WriteLine("Year is not Leap year");
+            }
+
         }
-        
     }
 }
