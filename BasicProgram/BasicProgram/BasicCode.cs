@@ -12,22 +12,24 @@ namespace BasicProgram
 
         public int N;
         int i;
-        public void PowerOfValue()
+        double sum =0.0;
+        public void HarmonicValue()
         {
-            Console.WriteLine("Enter the Value");
+            Console.WriteLine("Enter the number of term");
             N = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Power of 2" +N+ "is: " +(Math.Pow(2, N)) );  //calculate the power of number
-
-            Console.WriteLine("Printing till Power VAlue");
-            for (i = 0; i <= N; i++)
+            
+            for (i = 1; i <= N; i++)
             {
-                Console.WriteLine("Power of 2" +i+ "is :" +(Math.Pow(2, i)));  //iterate the loop till the value of N and pribt the result
+                Console.WriteLine("1/{0} + ", +i);  //Print harmonic vlaue
+              
             }
-            
-            //Console.WriteLine("Power of two:" +PowerOfTwo);
+            sum += 1 / (float)i;   //sum = sum + float(i)
+                                   // sum = 0.0 +(float)i
+            Console.WriteLine("Sum of serious {0} to {1}:", N, sum);
 
-            
+
+
         }
     }
 }

@@ -7,7 +7,7 @@
         {
             Console.WriteLine("Welcome to the Basic core Program");
             BasicCode code = new BasicCode();
-            code.PowerOfValue();
+            code.HarmonicValue();
 
         }
     }
