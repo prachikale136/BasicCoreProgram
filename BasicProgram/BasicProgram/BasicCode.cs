@@ -13,20 +13,29 @@ namespace BasicProgram
         public int N;
         int i;
         double sum =0.0;
-        public void HarmonicValue()
+        public void PrimeFactor()
         {
-            Console.WriteLine("Enter the number of term");
+            Console.WriteLine("Enter the number to find prime factor");
             N = Convert.ToInt32(Console.ReadLine());
-
-            
-            for (i = 1; i <= N; i++)
+            while (N%2 == 0)
             {
-                Console.WriteLine("1/{0} + ", +i);  //Print harmonic vlaue
+                Console.WriteLine(2 + "");
+                N /= 2;
+                for (int i = 3; i <= Math.Sqrt(N); i+=2)
+                { 
+                    while (N %i == 0) 
+                    {
+                        Console.WriteLine(i + "");
+                        N /= i;
+                    }
+                }
+                if (N> 2)
+                {
+                    Console.WriteLine( N );
+                }
               
             }
-            sum += 1 / (float)i;   //sum = sum + float(i)
-                                   // sum = 0.0 +(float)i
-            Console.WriteLine("Sum of serious {0} to {1}:", N, sum);
+           
 
 
 
