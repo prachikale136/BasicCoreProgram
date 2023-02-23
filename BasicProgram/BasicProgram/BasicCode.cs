@@ -9,26 +9,43 @@ namespace BasicProgram
     
     internal class BasicCode
     {
-        char alphabet;
+        public int number1;
+        public int number2; 
+        public int number3;
       
-        public void VowelAndConsonant()
+        public void LargestNumber()
         {
-            Console.WriteLine("Enter Alphabet to check vowel and constant");
-            alphabet = Convert.ToChar(Console.ReadLine());
+            Console.WriteLine("Enter the first number");
+            number1 = Convert.ToInt32(Console.ReadLine());
 
-            if (alphabet == 'a' || alphabet == 'e' || alphabet == 'i' || alphabet == 'o' || alphabet == 'u')
+            Console.WriteLine("Enter the Second Number");
+            number2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter the third number");
+            number3 = Convert.ToInt32(Console.ReadLine());
+
+            if (number1 > number2)
             {
-                Console.WriteLine("Alphabet is vowel");
+                if (number1 > number3)
+                {
+                    Console.WriteLine(" the 1st number is the greatest number");
+
+                }
+                else
+                {
+                    Console.WriteLine("The 3rd number is the greatest number");
+                }
+            }
+
+            else if (number2 > number3)
+            {
+                Console.WriteLine(" The 2nd number is the greatest number");
             }
             else
             {
-                Console.WriteLine("Alphabet is consonant");
+                Console.WriteLine("The 3rd number is the greatest number");
             }
-            
-            
-
-
-
+           
         }
     }
 }
