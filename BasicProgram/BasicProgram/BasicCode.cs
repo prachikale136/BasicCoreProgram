@@ -10,31 +10,23 @@ namespace BasicProgram
     internal class BasicCode
     {
 
-        public int N;
-        int i;
-        double sum =0.0;
-        public void PrimeFactor()
+        public int dividend;
+        public int divisor;
+        int quotient;
+        int remainder;
+        public void QuotientAndRemainder()
         {
-            Console.WriteLine("Enter the number to find prime factor");
-            N = Convert.ToInt32(Console.ReadLine());
-            while (N%2 == 0)
-            {
-                Console.WriteLine(2 + "");
-                N /= 2;
-                for (int i = 3; i <= Math.Sqrt(N); i+=2)
-                { 
-                    while (N %i == 0) 
-                    {
-                        Console.WriteLine(i + "");
-                        N /= i;
-                    }
-                }
-                if (N> 2)
-                {
-                    Console.WriteLine( N );
-                }
-              
-            }
+            Console.WriteLine("Enter the dividend"); //take divident from user
+            dividend = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the divisor"); //take divisor from user
+            divisor = Convert.ToInt32(Console.ReadLine());
+
+            //now calculate the Quotient and remainder
+            quotient = dividend / divisor;
+            remainder = dividend % divisor;
+
+            Console.WriteLine("Quotient is :" + quotient);
+            Console.WriteLine("Remainder is :" +remainder);
            
 
 
