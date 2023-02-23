@@ -10,24 +10,27 @@ namespace BasicProgram
     internal class BasicCode
     {
 
-        public int dividend;
-        public int divisor;
-        int quotient;
-        int remainder;
-        public void QuotientAndRemainder()
+        public int number1;
+        public int number2;
+        int temp;
+        public void SwapTwoNumber()
         {
-            Console.WriteLine("Enter the dividend"); //take divident from user
-            dividend = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the divisor"); //take divisor from user
-            divisor = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the first number");
+            number1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the second number");
+            number2= Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("/n/n");
+            Console.WriteLine("Before Swapping");
+            Console.WriteLine("First Number" +number1);
+            Console.WriteLine("second Number " + number2);
 
-            //now calculate the Quotient and remainder
-            quotient = dividend / divisor;
-            remainder = dividend % divisor;
-
-            Console.WriteLine("Quotient is :" + quotient);
-            Console.WriteLine("Remainder is :" +remainder);
-           
+            temp = number1; //store number1 value into the temp variable
+            number1= number2;  //store number 2 value into the number 1 variable
+            number2= temp;  //and last store  temp value to the number 2 variable
+            Console.WriteLine("/n/n");
+            Console.WriteLine("After Swapping");
+            Console.WriteLine("First number:" +number1);
+            Console.WriteLine("Second Number:" + number2);
 
 
 
