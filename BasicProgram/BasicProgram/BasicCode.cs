@@ -9,20 +9,22 @@ namespace BasicProgram
     
     internal class BasicCode
     {
-        public int input;
-        public void EvenOrOdd()
+        char alphabet;
+      
+        public void VowelAndConsonant()
         {
-            Console.WriteLine("Enter number to check even or odd");
-            input = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Alphabet to check vowel and constant");
+            alphabet = Convert.ToChar(Console.ReadLine());
 
-            if ((input % 2) == 0)
+            if (alphabet == 'a' || alphabet == 'e' || alphabet == 'i' || alphabet == 'o' || alphabet == 'u')
             {
-                Console.WriteLine("number is even Number");
+                Console.WriteLine("Alphabet is vowel");
             }
             else
             {
-                Console.WriteLine("Number is Odd Number");
+                Console.WriteLine("Alphabet is consonant");
             }
+            
             
 
 
